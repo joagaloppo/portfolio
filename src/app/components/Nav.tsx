@@ -8,18 +8,18 @@ interface NavProps {
 
 export const Nav: React.FC<NavProps> = () => {
   return (
-    <nav className="bg-white fixed w-full p-6 backdrop-blur-sm bg-white/95 dark:bg-stone-800/95 shadow-[0_0px_10px_2px_rgba(0,0,0,0.05)] dark:shadow-[0_0px_10px_2px_rgba(0,0,0,0.2)] z-50">
-      <div className="flex items-center justify-between max-w-screen-xl mx-auto w-full">
+    <nav className="bg-white border border-b fixed w-full p-6 backdrop-blur-sm bg-white/95 dark:bg-stone-800/95 dark:border-stone-900/95 z-50">
+      <div className="flex items-center justify-between max-w-screen-2xl mx-auto w-full">
         <h1 className="font-semibold pointer-events-none">joagaloppo.com</h1>
         <ul className="hidden sm:inline">
-          <li className="inline-block mx-2 font-semibold hover:underline">
-            <a href="#about">about</a>
+          <li className="inline-block mx-2 font-semibold">
+            <a className="hover:underline" href="#about">about</a>
           </li>
-          <li className="inline-block mx-2 font-semibold hover:underline">
-            <a href="#projects">projects</a>
+          <li className="inline-block mx-2 font-semibold">
+            <a className="hover:underline" href="#projects">projects</a>
           </li>
-          <li className="inline-block mx-2 font-semibold hover:underline">
-            <a href="#contact">contact</a>
+          <li className="inline-block mx-2 font-semibold">
+            <a className="hover:underline" href="#contact">contact</a>
           </li>
         </ul>
         <Drawer />

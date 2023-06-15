@@ -1,10 +1,11 @@
 import Hero from "./components/Hero";
+import About from "./components/About";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <article className="flex min-h-screen bg-neutral-50" />
+      <About />
     </>
   );
 }

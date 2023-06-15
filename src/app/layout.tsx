@@ -1,8 +1,10 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import { Chivo } from "next/font/google";
 import { Nav } from "@/app/components/Nav";
 
 const inter = Inter({ subsets: ["latin"] });
+const chivo = Chivo({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Create Next App",
@@ -12,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={inter.className + " debug-screens"}>
+      <body className={chivo.className + " debug-screens"}>
         <Nav />
         {children}
       </body>

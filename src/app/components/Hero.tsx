@@ -8,22 +8,22 @@ const Hero: React.FC<HeroProps> = () => {
   return (
     <section className="bg-stone-50 dark:bg-stone-900">
 
-      <div className="min-h-[100svh] gap-8 max-w-screen-lg flex flex-col-reverse sm:flex-row sm:pt-0 px-3 sm:px-6 items-center mx-auto justify-center">
+      <div className="min-h-[100svh] gap-2 max-w-screen-lg flex flex-col-reverse md:flex-row md:pt-0 px-3 md:px-6 items-center mx-auto justify-center">
 
-        <div className="flex flex-col items-center sm:items-start w-full gap-8 sm:gap-10">
+        <div className="flex flex-col items-center md:items-start w-full gap-8 md:gap-10">
           
-          <span className="text-3xl sm:text-4xl lg:text-5xl text-center sm:text-left font-extrabold text-stone-900 dark:text-gray-100 sm:leading-[50px] leading-10 flex-grow">
+          <span className="text-3xl md:text-4xl lg:text-5xl text-center md:text-left font-extrabold text-stone-900 dark:text-gray-100 md:leading-[50px] leading-10 flex-grow">
             Full-stack TypeScript <br />
             Developer
             <Image className="inline-flex ml-4" src="/hand.png" alt="Hero" width={50} height={50} />
           </span>
 
-          <span className="text-lg sm:text-base lg:text-lg font-normal max-w-lg text-center sm:text-left text-stone-900 dark:text-gray-100">
+          <span className="text-lg max-w-md md:text-base lg:text-lg font-normal lg:max-w-lg text-center md:text-left text-stone-900 dark:text-gray-100">
             I&apos;m Joaquin, a developer specializing in TypeScript. Passionate about creating elegant, accessible, and
             high-performance web applications
           </span>
 
-          <ul className="flex justify-center sm:justify-start gap-4">
+          <ul className="flex items-center justify-center md:justify-start gap-4">
             <li className="text-stone-900 dark:text-gray-100 cursor-pointer hover:opacity-75">
               <a href="https://www.linkedin.com/in/joagaloppo" target="_blank" rel="noopener noreferrer">
                 <svg width={30} height={30} viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -52,13 +52,13 @@ const Hero: React.FC<HeroProps> = () => {
 
         </div>
 
-        <div className="w-fit hidden sm:inline" bg-gray-200>
+        <div className="w-fit hidden md:inline" bg-gray-200>
           <Image
-            className="lg:w-full sm:w-11/12 mx-auto rounded-full"
+            className="lg:w-full w-11/12 mx-auto rounded-full"
             src="/profile.jpg"
-            alt="Hero"
-            width={500}
-            height={500}
+            alt="Profile"
+            width={600}
+            height={600}
           />
         </div>
 
