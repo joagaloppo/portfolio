@@ -1,15 +1,11 @@
 import Image from "next/image";
 
-interface AboutProps {
-  children?: React.ReactNode;
-}
-
-const About: React.FC<AboutProps> = () => {
+const About: React.FC = () => {
   return (
     <section id="about" className="bg-white ">
       <div className="mx-auto flex w-full max-w-screen-lg flex-col gap-10 px-3 py-24 text-center lg:flex-row lg:gap-20 lg:px-6 lg:py-40 lg:text-left">
         <div className="flex w-full items-center">
-          <div className="relative mx-auto h-[380px] lg:h-[450px] max-w-md sm:w-full">
+          <div className="relative mx-auto h-[380px] lg:h-[440px] max-w-md sm:w-full">
             <Image
               src="/about.webp"
               className="h-full min-h-[380px] w-auto rounded-2xl object-cover"
@@ -21,7 +17,7 @@ const About: React.FC<AboutProps> = () => {
               <div className="flex h-full w-full items-center justify-center">
                 <Image
                   src="/animate.png"
-                  className="h-[174px] w-[174px] animate-spin-slow opacity-90"
+                  className="h-[174px] w-[174px] animate-spin-slow opacity-80"
                   alt="About"
                   width={400}
                   height={400}
@@ -38,10 +34,14 @@ const About: React.FC<AboutProps> = () => {
           </div>
         </div>
         <div className="flex w-full flex-col gap-4">
-          <h2 className="text-lg font-bold text-blue-500 ">ABOUT ME</h2>
-          <h3 className="text-3xl font-bold tracking-tight  text-stone-900">I&apos;m Joaquin Galoppo</h3>
-          <p className="mx-auto max-w-md text-left text-lg text-stone-500 lg:mx-0 ">
-            I am a 20 year old student from Argentina. Experienced in building complex web apps, creating and working
+          <div className="flex w-fit mx-auto lg:mx-0 rounded-lg bg-primary text-stone-50 px-4 py-[5px]">
+                  <span className="align-baseline font-semibold text-xs tracking-tight">
+                    ABOUT ME
+                  </span>
+                </div>
+          <h3 className="text-3xl font-bold tracking-tight  text-primary">I&apos;m Joaquin Galoppo</h3>
+          <p className="mx-auto max-w-md text-left text-lg text-secondary lg:mx-0 ">
+            Twenty year old developer from Argentina. Experienced in building complex web apps, creating and working
             with RESTful APIs and developing single page applications. Passionate about writing clean code, following
             community standards and staying updated with the tech world. Quick learner, able to adapt to new tools.
             <br />

@@ -8,7 +8,8 @@ const chivo = Chivo({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Joaquin Galoppo - Portfolio",
-  description: "I'm Joaquin, a developer specializing in TypeScript. Passionate about creating elegant, accessible, and high-performance web applications",
+  description:
+    "I'm Joaquin, a developer specializing in TypeScript. Passionate about creating elegant, accessible, and high-performance web applications",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

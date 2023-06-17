@@ -1,31 +1,32 @@
 "use client";
 
 import { useState } from "react";
+import { IoMenuSharp, IoCloseSharp } from "react-icons/io5";
 import scrollTo from "../utils/scrollTo";
+import * as Dialog from "@radix-ui/react-dialog";
 
-interface NavProps {
-  children?: React.ReactNode;
-}
-
-export const Nav: React.FC<NavProps> = () => {
+export const Nav: React.FC = () => {
   return (
-    <nav className="/95 /95 fixed z-50 w-full border-b bg-white bg-white/95 py-6 backdrop-blur-sm">
+    <nav className="fixed z-50 w-full border-b bg-white bg-white/95 py-6 backdrop-blur-sm">
       <div className="mx-auto flex w-full max-w-screen-lg items-center justify-between px-3 lg:px-6">
-        <h1 onClick={() => scrollTo("hero")} className="text-stone-800 cursor-pointer tracking-tight font-semibold hover:underline">
+        <h1
+          onClick={() => scrollTo("hero")}
+          className="cursor-pointer font-semibold tracking-tight text-primary hover:underline"
+        >
           joagaloppo.com
         </h1>
         <ul className="hidden sm:inline">
-          <li className="mx-2 inline-block font-semibold">
+          <li className="mx-2 inline-block font-semibold text-primary">
             <span onClick={() => scrollTo("about")} className="cursor-pointer tracking-tight hover:underline">
               about
             </span>
           </li>
-          <li className="mx-2 inline-block font-semibold">
+          <li className="mx-2 inline-block font-semibold text-primary">
             <span onClick={() => scrollTo("work")} className="cursor-pointer tracking-tight hover:underline">
               projects
             </span>
           </li>
-          <li className="mx-2 inline-block font-semibold">
+          <li className="mx-2 inline-block font-semibold text-primary">
             <span onClick={() => scrollTo("contact")} className="cursor-pointer tracking-tight hover:underline">
               contact
             </span>
@@ -37,16 +38,12 @@ export const Nav: React.FC<NavProps> = () => {
   );
 };
 
-import * as Dialog from "@radix-ui/react-dialog";
-
 const Drawer = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
       <button onClick={() => setOpen(true)} className="sm:hidden">
-        <svg className="h-6 w-6 text-stone-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
+        <IoMenuSharp className="h-6 w-auto text-primary" />
       </button>
 
       <Dialog.Root open={open} onOpenChange={() => setOpen((x) => !x)}>
@@ -54,11 +51,9 @@ const Drawer = () => {
           className="visible fixed inset-0 z-50 flex h-fit w-full justify-end sm:invisible"
           aria-label="Drawer"
         >
-          <div className="mx-auto flex min-h-[100svh] w-full flex-col overflow-y-auto bg-white p-6 ">
+          <div className="mx-auto flex min-h-[100svh] w-full flex-col overflow-y-auto bg-white px-3 py-6 lg:px-6">
             <button onClick={() => setOpen(false)} className="flex w-full justify-end">
-              <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
+              <IoCloseSharp className="h-6 w-auto text-primary" />
             </button>
             <ul className="flex h-auto flex-grow flex-col items-center justify-center gap-4">
               <li className="mb-4">
@@ -67,7 +62,7 @@ const Drawer = () => {
                     scrollTo("about");
                     setOpen(false);
                   }}
-                  className="text-2xl font-semibold"
+                  className="text-2xl font-semibold text-primary"
                 >
                   about
                 </span>
@@ -78,7 +73,7 @@ const Drawer = () => {
                     scrollTo("work");
                     setOpen(false);
                   }}
-                  className="text-2xl font-semibold"
+                  className="text-2xl font-semibold text-primary"
                 >
                   projects
                 </span>
@@ -89,7 +84,7 @@ const Drawer = () => {
                     scrollTo("contact");
                     setOpen(false);
                   }}
-                  className="text-2xl font-semibold"
+                  className="text-2xl font-semibold text-primary"
                 >
                   contact
                 </span>
