@@ -101,12 +101,12 @@ const Card: React.FC<Data> = ({ title, description, liveDemo, sourceCode, classN
         {title}
         <p
           className="secondary ml-2 inline-block rounded-3xl border
-border-secondary/40 px-1.5 py-1 align-text-bottom text-[12px]  font-normal leading-none  text-secondary"
+border-secondary/40 px-1.5 py-1 align-text-bottom text-[12px]  font-normal leading-none text-primary"
         >
           Public
         </p>
       </h3>
-      <p className="text-md mx-auto  max-w-[450px] text-secondary lg:mx-0">{description}</p>
+      <p className="text-md mx-auto  max-w-md text-secondary lg:mx-0">{description}</p>
       <div className="mt-4 flex flex-col justify-end gap-2 sm:flex-row">
         <a
           href={liveDemo}

@@ -5,7 +5,7 @@ const About: React.FC = () => {
     <section id="about" className="bg-white ">
       <div className="mx-auto flex w-full max-w-screen-lg flex-col gap-10 px-3 py-24 text-center lg:flex-row lg:gap-20 lg:px-6 lg:py-40 lg:text-left">
         <div className="flex w-full items-center">
-          <div className="relative mx-auto h-[380px] lg:h-[440px] max-w-md sm:w-full">
+          <div className="relative mx-auto h-[380px] lg:h-full max-w-md sm:w-full">
             <Image
               src="/about.webp"
               className="h-full min-h-[380px] w-auto rounded-2xl object-cover"
