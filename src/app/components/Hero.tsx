@@ -6,14 +6,14 @@ const Hero: React.FC = () => {
   return (
     <>
       <section id="hero" className="bg-stone-50 ">
-        <div className="h-[74px]" />
-        <div className="mx-auto flex max-w-screen-lg flex-col-reverse items-center justify-center gap-8 px-3 pb-20 pt-12 lg:min-h-[calc(calc(100svh_-_74px))] lg:flex-row lg:px-6 lg:pt-0">
+        <div className="h-16"/>
+        <div className="mx-auto flex max-w-screen-lg flex-col-reverse items-center justify-center gap-8 px-4 pb-20 pt-10 lg:min-h-[calc(calc(100svh_-_74px))] lg:flex-row lg:px-6 lg:pt-0">
           <div className="flex w-full flex-col items-center gap-8 lg:items-start lg:gap-12">
-            <span className="flex-grow text-center text-3xl font-extrabold leading-10 tracking-tight text-primary lg:text-left lg:text-5xl lg:leading-[58px]">
+            <span className="flex-grow text-center text-2xl font-extrabold leading-8 tracking-tight text-primary lg:text-left lg:text-5xl lg:leading-[58px]">
               Full-stack TypeScript <br />
               Developer
               <Image
-                className="relative bottom-[6px] ml-3 inline-flex h-8 w-auto tracking-tight lg:bottom-[7px] lg:h-11"
+                className="relative bottom-[6px] ml-3 inline-flex h-7 w-auto tracking-tight lg:bottom-[7px] lg:h-11"
                 src="/hand.png"
                 alt="Hero"
                 width={44}
@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
               />
             </span>
 
-            <span className="max-w-md text-center text-lg font-normal text-secondary lg:max-w-lg lg:text-left lg:text-xl ">
+            <span className="max-w-md text-center text-md font-normal text-secondary lg:max-w-lg lg:text-left lg:text-xl ">
               I&apos;m Joaquin, a developer specializing in TypeScript. Passionate about creating elegant, accessible,
               and high-performance web applications
             </span>

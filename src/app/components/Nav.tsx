@@ -8,7 +8,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 export const Nav: React.FC = () => {
   return (
     <nav className="fixed z-50 w-full border-b bg-white bg-white/95 py-5 lg:py-6 backdrop-blur-sm">
-      <div className="mx-auto flex w-full max-w-screen-lg items-center justify-between px-3 lg:px-6">
+      <div className="mx-auto flex w-full max-w-screen-lg items-center justify-between px-4 lg:px-6">
         <h1
           onClick={() => scrollTo("hero")}
           className="cursor-pointer font-semibold tracking-tight text-primary hover:underline"
@@ -51,7 +51,7 @@ const Drawer = () => {
           className="visible fixed inset-0 z-50 flex h-fit w-full justify-end sm:invisible"
           aria-label="Drawer"
         >
-          <div className="mx-auto flex min-h-[100dvh] w-full flex-col overflow-y-auto bg-white px-3 py-5 lg:py-6 lg:px-6">
+          <div className="mx-auto flex min-h-[100dvh] w-full flex-col overflow-y-auto bg-white px-4 py-5 lg:py-6 lg:px-6">
             <button onClick={() => setOpen(false)} className="flex w-full justify-end">
               <IoCloseSharp className="h-6 w-auto text-primary" />
             </button>

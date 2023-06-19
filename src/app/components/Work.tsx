@@ -39,12 +39,12 @@ const Work: React.FC = () => {
 
   return (
     <section id="work" className="bg-stone-50  py-24 lg:py-40">
-      <div className="mx-auto flex max-w-screen-lg flex-col gap-12 px-3 lg:px-6">
+      <div className="mx-auto flex max-w-screen-lg flex-col gap-12 px-4 lg:px-6">
         <div className="flex flex-col items-center justify-center">
           <div className="mx-auto flex w-full max-w-md flex-col gap-4 text-center">
-            <h3 className="text-3xl font-bold tracking-tight  text-primary">What I&apos;ve been working on</h3>
-            <p className="text-lg text-secondary">
-              Here are some projects I&apos;ve created recently. I&apos;m always learning new tech and building things.
+            <h3 className="text-2xl lg:text-3xl font-bold tracking-tight  text-primary">Some Things I&apos;ve Built</h3>
+            <p className="text-md lg:text-lg text-secondary">
+              Here are some projects I&apos;ve created recently. I&apos;m always learning new technologies and building new things.
             </p>
           </div>
         </div>

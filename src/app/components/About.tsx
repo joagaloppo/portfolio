@@ -3,12 +3,12 @@ import Image from "next/image";
 const About: React.FC = () => {
   return (
     <section id="about" className="bg-white ">
-      <div className="mx-auto flex w-full max-w-screen-lg flex-col gap-10 px-3 py-24 text-center lg:flex-row lg:gap-20 lg:px-6 lg:py-40 lg:text-left">
+      <div className="mx-auto flex w-full max-w-screen-lg flex-col gap-y-6 px-4 py-24 text-center lg:flex-row lg:gap-20 lg:px-6 lg:py-40 lg:text-left">
         <div className="flex w-full items-center">
-          <div className="relative mx-auto h-[380px] lg:h-full max-w-md sm:w-full">
+          <div className="relative mx-auto h-[340px] max-w-md sm:w-full lg:h-full">
             <Image
               src="/about.webp"
-              className="h-full min-h-[380px] w-auto rounded-2xl object-cover"
+              className="h-full w-auto rounded-2xl object-cover"
               alt="About"
               width={1920}
               height={1080}
@@ -33,14 +33,12 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-full flex-col gap-4">
-          <div className="flex w-fit mx-auto lg:mx-0 rounded-lg bg-primary text-stone-50 px-4 py-[5px]">
-                  <span className="align-baseline font-semibold text-xs tracking-tight">
-                    ABOUT ME
-                  </span>
-                </div>
-          <h3 className="text-3xl font-bold tracking-tight  text-primary">I&apos;m Joaquin Galoppo</h3>
-          <p className="mx-auto max-w-md text-left text-lg text-secondary lg:mx-0 ">
+        <div className="flex w-full flex-col gap-4 max-w-md mx-auto">
+          <div className="flex w-fit rounded-lg bg-primary px-4 py-[5px] text-stone-50 lg:mx-0">
+            <span className="align-baseline text-[10px] font-semibold tracking-tight lg:text-xs">ABOUT ME</span>
+          </div>
+          <h3 className="text-2xl max-w-md w-full mx-auto text-left font-bold tracking-tight text-primary lg:text-3xl">I&apos;m Joaquin Galoppo</h3>
+          <p className="text-md mx-auto max-w-md text-left text-secondary lg:mx-0 lg:text-lg ">
             Twenty year old developer from Argentina. Experienced in building complex web apps, creating and working
             with RESTful APIs and developing single page applications. Passionate about writing clean code, following
             community standards and staying updated with the tech world. Quick learner, able to adapt to new tools.
