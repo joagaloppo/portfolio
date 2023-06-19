@@ -28,9 +28,9 @@ const Hero: React.FC = () => {
 
             <ul className="flex flex-wrap items-center justify-center gap-4 gap-y-8 lg:justify-start">
               <li className="cursor-pointer hover:opacity-75">
-                <div className="flex items-center gap-2.5 rounded-full bg-primary px-4 py-[5px] text-stone-50">
+                <div className="flex items-center gap-2 rounded-full bg-primary px-4 py-[5px] text-stone-50">
                   <a
-                    className="align-baseline text-xs tracking-tight"
+                    className="text-xs tracking-tight"
                     href="/resume.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
