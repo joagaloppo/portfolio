@@ -5,13 +5,13 @@ import scrollTo from "../utils/scrollTo";
 import Image from "next/image";
 
 const ScrollToTop = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [show, setShow] = useState(false);
 
   const toggleVisibility = () => {
-    if (window.pageYOffset > 300) {
-      setIsVisible(true);
+    if (window.scrollY > 400) {
+      setShow(true);
     } else {
-      setIsVisible(false);
+      setShow(false);
     }
   };
 
@@ -22,14 +22,14 @@ const ScrollToTop = () => {
 
   return (
     <div className="scroll-to-top">
-      {isVisible && (
+      {show && (
         <Image
-        onClick={() => scrollTo("hero")}
-        src="/scroll.png"    
-        className="fixed lg:bottom-6 lg:right-6 bottom-4 right-2 flex cursor-pointer items-center justify-center z-[100]"
-        alt="Scroll to top"
-        width={48}
-        height={48}
+          onClick={() => scrollTo("hero")}
+          src="/scroll.png"
+          className="fixed bottom-4 right-2 z-[100] flex cursor-pointer items-center justify-center lg:bottom-6 lg:right-6 animate-slide-in"
+          alt="Scroll to top"
+          width={48}
+          height={48}
         />
       )}
     </div>

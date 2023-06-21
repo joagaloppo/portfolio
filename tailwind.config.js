@@ -11,8 +11,13 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 8s linear infinite',
         'morph': 'morph 8s ease-in-out infinite',
+        'slide-in': 'slide-in 0.5s ease-in-out',
       },
       keyframes: {
+        'slide-in': {
+          '0%': { transform: 'translateY(150%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
         morph: {
           '0%': { borderRadius: '60% 40% 30% 70%/60% 30% 70% 40%' },
           '50%': { borderRadius: '30% 60% 70% 40%/50% 60% 30% 60%' },
