@@ -2,7 +2,7 @@ import { FaLinkedin as LinkedIn, FaGithub as GitHub, FaLocationArrow as Location
 
 import { AiFillMail as Email } from "react-icons/ai";
 
-const contactInfo = [
+const info = [
   {
     text: "Location",
     info: "Santa Fe, Argentina",
@@ -47,8 +47,8 @@ const Contact: React.FC = () => {
             </div>
           </div>
           <div className="flex w-fit max-w-full flex-col gap-8 gap-x-20 lg:mx-0 lg:grid lg:grid-cols-2 lg:gap-12">
-            {contactInfo.map((info, index) => (
-              <ContactInfo key={index} {...info} />
+            {info.map((info, index) => (
+              <Item key={index} {...info} />
             ))}
           </div>
         </div>
@@ -57,7 +57,7 @@ const Contact: React.FC = () => {
   );
 };
 
-const ContactInfo: React.FC<{
+const Item: React.FC<{
   text: string;
   info: string;
   icon: React.ReactNode;
@@ -65,14 +65,14 @@ const ContactInfo: React.FC<{
 }> = ({ text, info, icon, link }) => {
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
-      <div className="mx-auto flex w-full max-w-md gap-6 lg:gap-8 overflow-visible lg:mx-0">
+      <div className="mx-auto flex w-full max-w-md gap-6 overflow-visible lg:mx-0 lg:gap-8">
         <div className="flex h-[4.5rem] min-w-[4.5rem] items-center justify-center rounded-full border border-secondary/20 bg-white text-primary lg:h-20 lg:min-w-[5rem]">
           {icon}
         </div>
 
         <div className="flex w-full max-w-md flex-col justify-center overflow-hidden">
-          <span className="text-left text-md font-semibold text-primary lg:text-lg">{text}</span>
-          <span className="text-left text-sm font-normal text-secondary lg:text-md">{info}</span>
+          <span className="text-md text-left font-semibold text-primary lg:text-lg">{text}</span>
+          <span className="lg:text-md text-left text-sm font-normal text-secondary">{info}</span>
         </div>
       </div>
     </a>

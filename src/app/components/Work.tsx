@@ -42,9 +42,10 @@ const Work: React.FC = () => {
       <div className="mx-auto flex max-w-screen-lg flex-col gap-12 px-4 lg:px-6">
         <div className="flex flex-col items-center justify-center">
           <div className="mx-auto flex w-full max-w-md flex-col gap-4 text-center">
-            <h3 className="text-2xl lg:text-3xl font-bold tracking-tight  text-primary">Some Things I&apos;ve Built</h3>
-            <p className="text-md lg:text-lg text-secondary">
-              Here are some projects I&apos;ve created recently. I&apos;m always learning new technologies and building new things.
+            <h3 className="text-2xl font-bold tracking-tight text-primary  lg:text-3xl">Some Things I&apos;ve Built</h3>
+            <p className="text-md text-secondary lg:text-lg">
+              Here are some projects I&apos;ve created recently. I&apos;m always learning new technologies and building
+              new things.
             </p>
           </div>
         </div>
@@ -101,7 +102,7 @@ const Card: React.FC<Data> = ({ title, description, liveDemo, sourceCode, classN
         {title}
         <p
           className="secondary ml-2 inline-block rounded-3xl border
-border-secondary/40 px-1.5 py-1 align-text-bottom text-[12px]  font-normal leading-none text-primary"
+border-secondary/30 px-1.5 py-1 align-text-bottom text-[12px]  font-normal leading-none text-primary"
         >
           Public
         </p>
@@ -112,7 +113,7 @@ border-secondary/40 px-1.5 py-1 align-text-bottom text-[12px]  font-normal leadi
           href={liveDemo}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full items-center justify-center gap-2 rounded-xl border border-secondary/40 px-3.5  py-1.5 text-primary hover:opacity-80"
+          className="flex w-full items-center justify-center gap-2 rounded-xl border border-secondary/30 px-3.5  py-1.5 text-primary hover:opacity-80"
         >
           <Play className="h-2 w-auto" />
           <span className="font-medium text-primary">Demo</span>
@@ -121,7 +122,7 @@ border-secondary/40 px-1.5 py-1 align-text-bottom text-[12px]  font-normal leadi
           href={sourceCode}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full items-center justify-center gap-2 rounded-xl border border-secondary/40 px-3.5  py-1.5 text-primary hover:opacity-80"
+          className="flex w-full items-center justify-center gap-2 rounded-xl border border-secondary/30 px-3.5  py-1.5 text-primary hover:opacity-80"
         >
           <GitHub className="h-3 w-auto" />
           <span className="font-medium text-primary">Code</span>

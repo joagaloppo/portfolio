@@ -33,11 +33,13 @@ const About: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="flex w-full flex-col gap-4 max-w-md mx-auto">
+        <div className="mx-auto flex w-full max-w-md flex-col gap-4">
           <div className="flex w-fit rounded-lg bg-primary px-4 py-[5px] text-stone-50 lg:mx-0">
             <span className="align-baseline text-[10px] font-semibold tracking-tight lg:text-xs">ABOUT ME</span>
           </div>
-          <h3 className="text-2xl max-w-md w-full mx-auto text-left font-bold tracking-tight text-primary lg:text-3xl">I&apos;m Joaquin Galoppo</h3>
+          <h3 className="mx-auto w-full max-w-md text-left text-2xl font-bold tracking-tight text-primary lg:text-3xl">
+            I&apos;m Joaquin Galoppo
+          </h3>
           <p className="text-md mx-auto max-w-md text-left text-secondary lg:mx-0 lg:text-lg ">
             Twenty year old developer from Argentina. Experienced in building complex web apps, creating and working
             with RESTful APIs and developing single page applications. Passionate about writing clean code, following
