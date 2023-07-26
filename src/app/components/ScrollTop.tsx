@@ -25,8 +25,8 @@ const ScrollToTop = () => {
       {show && (
         <Image
           onClick={() => scrollTo("hero")}
-          src="/scroll.png"
-          className="fixed bottom-4 right-2 z-[100] flex cursor-pointer items-center justify-center lg:bottom-6 lg:right-6 animate-slide-in"
+          src="/finger.webp"
+          className="fixed bottom-4 right-2 z-[100] flex cursor-pointer items-center justify-center lg:bottom-6 lg:right-6"
           alt="Scroll to top"
           width={48}
           height={48}

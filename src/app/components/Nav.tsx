@@ -26,7 +26,7 @@ export const Nav: React.FC = () => {
       <div className="mx-auto flex w-full max-w-screen-lg items-center justify-between px-4 lg:px-6">
         <h1
           onClick={() => scrollTo("hero")}
-          className="cursor-pointer font-semibold tracking-tight text-primary hover:underline"
+          className="cursor-pointer font-semibold tracking-tight text-primary hover:underline underline-offset-2"
         >
           joagaloppo.com
         </h1>
@@ -35,7 +35,7 @@ export const Nav: React.FC = () => {
             <li key={index}>
               <span
                 onClick={link.onClick}
-                className="cursor-pointer font-semibold tracking-tight text-primary hover:underline"
+                className="cursor-pointer font-semibold tracking-tight text-primary hover:underline underline-offset-2"
               >
                 {link.text}
               </span>

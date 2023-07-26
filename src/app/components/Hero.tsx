@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { FaLinkedin as LinkedIn, FaGithub as GitHub, FaExternalLinkAlt as Link } from "react-icons/fa";
-import { AiFillMail as Email } from "react-icons/ai";
+import { FaLinkedin as LinkedIn, FaGithub as GitHub, FaEnvelope as Email } from "react-icons/fa";
+import { FiArrowUpRight as Link } from "react-icons/fi";
 
 const links = [
   {
@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             Developer
             <Image
               className="relative bottom-1 ml-2 inline-flex h-6 w-auto tracking-tight lg:bottom-1.5 lg:ml-4 lg:h-10"
-              src="/hand.png"
+              src="/hand.webp"
               alt="Hero"
               width={44}
               height={44}
@@ -36,17 +36,16 @@ const Hero: React.FC = () => {
           </span>
 
           <span className="text-md max-w-md text-center font-normal text-secondary lg:max-w-lg lg:text-left lg:text-xl ">
-            I&apos;m Joaquin, a developer specializing in TypeScript. Passionate about creating elegant, accessible, and
-            high-performance web applications
+          I&apos;m Joaquin, a tech lover turned developer. Looking to create world-class experiences on the web while learning and growing along the way.
           </span>
 
-          <ul className="flex flex-wrap items-center justify-center gap-4 gap-y-8 lg:justify-start">
+          <ul className="flex flex-wrap items-center gap-4 gap-y-8 lg:justify-start">
             <li className="cursor-pointer hover:opacity-75">
-              <div className="flex items-center gap-2 rounded-full bg-primary px-4 py-[5px] text-stone-50">
-                <a className="text-xs tracking-tight" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-                  Resume
+              <div className="flex w-fit gap-0.5 items-center rounded-lg bg-primary px-4 py-[5px] text-stone-50 lg:mx-0">
+                <a className="align-baseline text-[10px] font-semibold tracking-tight lg:text-xs" href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+                  CV
                 </a>
-                <Link className="h-2.5 w-auto" />
+                <Link className="h-4 w-auto" />
               </div>
             </li>
             {links.map((link, index) => (
@@ -56,7 +55,7 @@ const Hero: React.FC = () => {
         </div>
 
         <div className="w-fit">
-          <div className="aspect-square h-auto w-64 animate-morph bg-[url('/profile.jpg')] bg-cover bg-center bg-no-repeat transition lg:w-96" />
+          <div className="aspect-square h-auto w-64 animate-morph bg-gray-200 bg-[url('/profile.webp')] bg-cover bg-center bg-no-repeat transition lg:w-96" />
         </div>
       </div>
     </section>
@@ -68,7 +67,7 @@ const Item: React.FC<{
   link: string;
 }> = ({ icon, link }) => {
   return (
-    <li className="cursor-pointer  text-primary hover:opacity-75">
+    <li className="cursor-pointer text-primary hover:opacity-75">
       <a href={link} target="_blank" rel="noopener noreferrer">
         {icon}
       </a>

@@ -16,14 +16,14 @@ const About: React.FC = () => {
             <div className="absolute -bottom-6 -right-8 hidden h-[180px] w-[180px] translate-x-0 rounded-full bg-white/90 sm:inline">
               <div className="flex h-full w-full items-center justify-center">
                 <Image
-                  src="/animate.png"
+                  src="/animate.webp"
                   className="h-[174px] w-[174px] animate-spin-slow opacity-80"
                   alt="About"
                   width={400}
                   height={400}
                 />
                 <Image
-                  src="/working.png"
+                  src="/working.webp"
                   className="absolute left-[41px] top-[41px] h-12 w-12 translate-x-1/2 translate-y-1/2"
                   alt="About"
                   width={400}
@@ -41,13 +41,7 @@ const About: React.FC = () => {
             I&apos;m Joaquin Galoppo
           </h3>
           <p className="text-md mx-auto max-w-md text-left text-secondary lg:mx-0 lg:text-lg ">
-            Twenty year old developer from Argentina. Experienced in building complex web apps, creating and working
-            with RESTful APIs and developing single page applications. Passionate about writing clean code, following
-            community standards and staying updated with the tech world. Quick learner, able to adapt to new tools.
-            <br />
-            <br />
-            Strong communicator, team player and self-motivated. Experience with SCRUM. Dedicated in delivering
-            excellent results and always striving to exceed expectations.
+            Twenty year old developer from Argentina. Experienced in building complex web apps, creating and working with RESTful APIs and developing single page applications. Passionate about writing clean code, following community standards and staying updated with the tech world. Quick learner, able to adapt to new tools. Strong communicator, team player and self-motivated. Experienced with scrum and agile methodologies. Dedicated in delivering excellent results and always striving to exceed expectations.
           </p>
         </div>
       </div>

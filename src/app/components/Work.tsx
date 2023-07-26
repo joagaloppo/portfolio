@@ -2,35 +2,40 @@
 
 import { useState } from "react";
 import { FaPlay as Play, FaCode as GitHub } from "react-icons/fa";
+import { BsBookmarkFill as Bookmark } from "react-icons/bs";
 
 const projects = [
   {
-    title: "Game of Life",
-    description:
-      "Zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves.",
-    liveDemo: "https://game-of-life-joaquin-galoppo.vercel.app/",
-    sourceCode: "https://github.com",
-  },
-  {
-    title: "E-Commerce",
-    description:
-      "An e-commerce app built with React, Redux, Firebase, Stripe, and GraphQL. This is a complete e-commerce app where users can create an account, sign in, add items to cart, checkout, and pay for the items.",
-    liveDemo: "https://game-of-life-joaquin-galoppo.vercel.app/",
-    sourceCode: "https://github.com",
-  },
-  {
     title: "Finance Tracker",
+    chip: "Public",
     description:
-      "I created this app to learn the T3 framework. It is a finance tracker where users can create an account, add stocks to their portfolio, and see the latest news about the stocks they are following.",
-    liveDemo: "https://game-of-life-joaquin-galoppo.vercel.app/",
-    sourceCode: "https://github.com",
+      `Dynamic web app allowing authenticated users keep a record of their expenses and incomes and see their balance. Created using the T3 stack, in order to learn and practice new technologies. Deployed on Vercel.`,
+    liveDemo: "https://ft.joagaloppo.com/",
+    sourceCode: "https://github.com/joagaloppo/finance-tracker",
   },
   {
-    title: "Game of Life",
+    title: "Thumbnail Generator",
+    chip: "Public",
     description:
-      "Zero-player game, meaning that its evolution is determined by its initial state, requiring no further input. One interacts with the Game of Life by creating an initial configuration and observing how it evolves.",
-    liveDemo: "https://game-of-life-joaquin-galoppo.vercel.app/",
-    sourceCode: "https://github.com",
+      `Image processing web service that allow authenticated users upload images and create various sized thumbnails. Built on top of a serverless architecture using AWS Lambda, API Gateway, S3 and DynamoDB.`,
+    liveDemo: "https://tg.joagaloppo.com/",
+    sourceCode: "https://github.com/joagaloppo/thumbnail-generator",
+  },
+  {
+    title: "Portfolio",
+    chip: "Public",
+    description:
+      `Personal portfolio website that showcases my skills, projects, and contact information. Made with Next 13.4 app router. Deployed on Vercel.`,
+    liveDemo: "https://joagaloppo.com/",
+    sourceCode: "https://github.com/joagaloppo/portfolio",
+  },
+  {
+    title: "Ecommerce",
+    chip: "New",
+    description:
+      `Web app that allow users to browse products, add them to their cart and make orders. Built with Next.js, Express & MySQL. Currently working on it.`,
+    liveDemo: "https://ec.joagaloppo.com/",
+    sourceCode: "https://github.com/joagaloppo/ecommerce",
   },
 ];
 
@@ -44,7 +49,7 @@ const Work: React.FC = () => {
           <div className="mx-auto flex w-full max-w-md flex-col gap-4 text-center">
             <h3 className="text-2xl font-bold tracking-tight text-primary  lg:text-3xl">Some Things I&apos;ve Built</h3>
             <p className="text-md text-secondary lg:text-lg">
-              Here are some projects I&apos;ve created recently. I&apos;m always learning new technologies and building
+              Here are some projects I&apos;ve created recently. I&apos;m always learning and building
               new things.
             </p>
           </div>
@@ -55,6 +60,7 @@ const Work: React.FC = () => {
             <Card
               key={index}
               title={data.title}
+              chip={data.chip}
               description={data.description}
               liveDemo={data.liveDemo}
               sourceCode={data.sourceCode}
@@ -74,58 +80,50 @@ const Work: React.FC = () => {
 
 interface Data {
   title: string;
+  chip: string;
   description: string;
   liveDemo: string;
   sourceCode: string;
   className: string;
 }
 
-const Card: React.FC<Data> = ({ title, description, liveDemo, sourceCode, className }) => {
+const Card: React.FC<Data> = ({ title, chip, description, liveDemo, sourceCode, className }) => {
   return (
     <div
       className={
-        "flex max-w-md flex-col justify-between gap-8 rounded-2xl  border border-secondary/20 bg-white  p-8 lg:inline-flex lg:max-w-max lg:gap-6" +
+        "flex max-w-md flex-col justify-between gap-8 rounded-xl  border border-secondary/20 bg-white  p-8 lg:inline-flex lg:max-w-max lg:gap-6" +
         className
       }
     >
-      <h3 className="text-xl font-semibold text-primary">
-        <svg
-          height="16"
-          viewBox="0 0 16 16"
-          version="1.1"
-          width="16"
-          data-view-component="true"
-          className="mr-2 inline-block text-secondary"
-        >
-          <path d="M2 2.5A2.5 2.5 0 0 1 4.5 0h8.75a.75.75 0 0 1 .75.75v12.5a.75.75 0 0 1-.75.75h-2.5a.75.75 0 0 1 0-1.5h1.75v-2h-8a1 1 0 0 0-.714 1.7.75.75 0 1 1-1.072 1.05A2.495 2.495 0 0 1 2 11.5Zm10.5-1h-8a1 1 0 0 0-1 1v6.708A2.486 2.486 0 0 1 4.5 9h8ZM5 12.25a.25.25 0 0 1 .25-.25h3.5a.25.25 0 0 1 .25.25v3.25a.25.25 0 0 1-.4.2l-1.45-1.087a.249.249 0 0 0-.3 0L5.4 15.7a.25.25 0 0 1-.4-.2Z"></path>
-        </svg>
+      <h3 className="text-lg font-semibold text-primary gap-2 flex items-center">
+        <Bookmark className="h-3 w-auto" />
         {title}
         <p
-          className="secondary ml-2 inline-block rounded-3xl border
+          className="secondary inline-block rounded-3xl border
 border-secondary/30 px-1.5 py-1 align-text-bottom text-[12px]  font-normal leading-none text-primary"
         >
-          Public
+          {chip}
         </p>
       </h3>
-      <p className="text-md mx-auto  max-w-md text-secondary lg:mx-0">{description}</p>
+      <p className="text-sm mx-auto  max-w-md text-secondary lg:mx-0">{description}</p>
       <div className="mt-4 flex flex-col justify-end gap-2 sm:flex-row">
         <a
           href={liveDemo}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full items-center justify-center gap-2 rounded-xl border border-secondary/30 px-3.5  py-1.5 text-primary hover:opacity-80"
+          className="flex w-full items-center justify-center gap-2 rounded-xl border border-secondary/30 px-3.5  py-1.5 text-primary hover:bg-gray-50"
         >
           <Play className="h-2 w-auto" />
-          <span className="font-medium text-primary">Demo</span>
+          <span className="font-medium text-primary text-sm">Demo</span>
         </a>
         <a
           href={sourceCode}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex w-full items-center justify-center gap-2 rounded-xl border border-secondary/30 px-3.5  py-1.5 text-primary hover:opacity-80"
+          className="flex w-full items-center justify-center gap-2 rounded-xl border border-secondary/30 px-3.5  py-1.5 text-primary hover:bg-gray-50"
         >
           <GitHub className="h-3 w-auto" />
-          <span className="font-medium text-primary">Code</span>
+          <span className="font-medium text-primary text-sm">Code</span>
         </a>
       </div>
     </div>
